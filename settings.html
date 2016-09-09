@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">	
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+			<script type="text/javascript" src="js/settings.js"></script>
+        <title>Settings</title>    
+	</head>
+    <body onload="onLoad()">
+    <div class="app">
+		<div ng-app="myTaskApp" ng-controller="formCtrl">
+			<div class="container">
+				<div class="well well-md">
+					<div class="form-group">
+						<form>
+							<h4>My City Application Settings</h4> 
+							<p class="text-danger">Privacy Notice: Mycity.app never store any phone number or identifiable information on server with GPS coordinate. Your phone number is only used to validate the registered user' credentials.</p>
+							<input type="text" id="phone" ng-model="phone" maxLength="10" class="form-control input-lg" placeholder="Enter Your Mobile Number">
+							<input type="text" id="domain" ng-model="domain" maxLength="30" class="form-control input-lg" placeholder="Enter Domain.com">
+							<button class="btn btn-lg btn-primary btn-block" type="submit" ng-click=saveSettings()>Submit</button><br>
+							<div align="center">
+							<a href="index.html"><button type="button" class="btn btn-primary">Home</button></a>
+							<a href="otp.html"><button type="button" class="btn btn-primary">Request New OTP</button></a>
+							<a href="otpentry.html"><button type="button" class="btn btn-primary">Confirm OTP</button></a>
+							</div>
+							</form>
+					</div>  
+				</div> <!-- /container -->
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">	
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <title>Help</title>    
+	</head>
+    <body>
+		<div class="app">
+			<div class="container">
+				<div class="col-sm-12">
+					<a href="index.html"><button type="button" class="btn btn-primary">Home</button></a>
+					<button type="button" class="btn btn-block btn-info" data-toggle="collapse" data-target="#faq1">How to register?</button>
+					<div id="faq1" class="collapse well well-sm">
+						<ol>
+							<li>Go to <a href="settings.html">settings</a></li>
+							<li>Enter phone number of device from which you are registering.</li>
+							<li>Press Submit on setting screen, this will bring you to <a href="otp.html">OTP</a> section</li>
+							<li>Press "Request for OTP" on OTP Screen.</li>
+							<li>Wait for OTP and enter OTP on OTP Screen and press <a href="otpentry.html">"Confirm OTP"</a></li>
+					 </ol>
+					</div>
+					<button type="button" class="btn btn-block btn-info" data-toggle="collapse" data-target="#faq2">How to Login?</button>
+					<div id="faq2" class="collapse well well-sm">
+						<p>Same steps as registering, If you are already not registered, application will register yourself</p>
+					</div>
+					<button type="button" class="btn btn-block btn-info" data-toggle="collapse" data-target="#faq3">Any Other issue or to Contact Support Team?</button>
+					<div id="faq3" class="collapse well well-sm">
+						<p>Please share your concern/complaints/feedback <a href="http://mysite.com/contactus">here</a>. </p>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

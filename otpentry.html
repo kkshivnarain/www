@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">	
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+			<script type="text/javascript" src="js/otpentry.js"></script>
+        <title>OTP</title>    
+	</head>
+    <body onload="onLoad()">
+        <div class="app">
+	<div ng-app="myTaskApp" ng-controller="formCtrl">
+    <div class="container">
+	<div class="well well-md">
+		  <div class="form-group">
+				<input type="text" id="phone" ng-model="phone" maxLength="20" class="form-control input-lg" placeholder="+91 Your Phone Number">
+				<input type="text" ng-model="otp" maxLength="20" class="form-control input-lg" placeholder="Wait for OTP on SMS">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="confirmOTP()">Confirm OTP</button>
+      </form></br>
+				<div align="center">
+							<a href="index.html"><button type="button" class="btn btn-primary">Home</button></a>
+							<a href="otp.html"><button type="button" class="btn btn-primary">Request New OTP</button></a>					
+						</div>
+	</div>  
+    </div> <!-- /container -->
+        </div>
+		</div>
+		</div>
+	</body>
+</html>

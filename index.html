@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">	
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        <title>My City</title>    
+    </head>
+    <body>
+        <div class="app">		
+			<div ng-app="myApp" ng-controller="myCtrl">
+					<div class="col-sm-12" align="center">
+						<a href="score.html"><button type="button" class="btn btn-primary">Your Score</button></a>
+						<a href="{{domain}}/index"> <button type="button" class="btn btn-primary">Issue Map</button></a>
+						<a href="help.html"> <button type="button" class="btn btn-primary">Help</button></a>
+						<a href="settings.html"> <button type="button" class="btn btn-primary">Settings</button></a>
+						<h4>Be a smart city volunteer, Track civic issues here for your city.</h4><hr>
+						<button id = "garbage" ng-click="getPosition('garbage')" class="btn btn-info"><img src="img/garbage.png"></br><h4>Garbage Not Collected</h4></button><hr>
+						<button id = "nolights" ng-click="getPosition('nolights')" class="btn btn-info"><img src="img/nolights.png"></br><h4>Road Lights Not Working</h4></button><hr>
+						<button id = "roaddamaged" ng-click="getPosition('damagedroad')" class="btn btn-info"><img src="img/damagedroad.png"></br><h4>Road Damaged</h4></button><hr>
+						<button id = "notrafficlight" ng-click="getPosition('notrafficlight')" class="btn btn-info"><img src="img/notrafficlight.png"></br><h4>Traffic Lights Down</h4></button><hr>
+						<button id = "drainoverflow" ng-click="getPosition('drainoverflowing')" class="btn btn-info"><img src="img/drainoverflowing.png"></br><h4>Overflowing Drain</h4></button><hr>
+					</div>
+			</div>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>	
+	</html>

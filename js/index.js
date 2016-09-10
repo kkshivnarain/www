@@ -7,7 +7,7 @@
 	if(localStorage.getItem("phone") != undefined){
 		var phone = localStorage.getItem("phone");
 	}else{
-	window.open("login.html","_self");
+	window.open("register.html","_self");
 	}
 	$scope.getPosition = function(myissue) {
 		var options = {
@@ -24,10 +24,12 @@
 		console.log(timestamp);
 		var myurl=localStorage.getItem("domain");
 		myurl=myurl+"/"+"mycity/iwilltrack/";
+		var auth=localStorage.getItem("auth");
+//		var phone =localStorage.getItem("phone");
 		console.log(myurl);	
-//		$.ajaxSetup({
-//			headers: {'Authorization': "Basic admin:potterkk"}
-//		});
+		$.ajaxSetup({
+			headers: {'Authorization': auth}
+		});
 		$.ajax({
 			url: myurl,
 			type:"POST",
@@ -47,8 +49,4 @@
       alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
    }
 }
-//	$scope.getTrashPosition=function(){
-//	$scope.getPosition('garbage');
-//	$scope.addCredit("userphone"); add user credit separately
-//	}
 });

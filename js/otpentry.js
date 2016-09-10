@@ -4,7 +4,11 @@ $.support.cors = true;
 	}
 var app = angular.module('myTaskApp', []);
 app.controller('formCtrl',  function($scope,$http) {
-	$scope.phone=localStorage.getItem("phone");
+		if(localStorage.getItem("phone")!=undefined){
+		$scope.phone=localStorage.getItem("phone");
+	}else{
+		window.open("register.html","_self");	
+	}
 	$scope.confirmOTP=function(){
 	var myurl=localStorage.getItem("domain");
 	myurl=myurl+"/accounts/otp/"+$scope.phone.substr(3,10)+"/"+$scope.otp+"/";

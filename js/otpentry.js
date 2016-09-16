@@ -4,11 +4,7 @@ $.support.cors = true;
 	}
 var app = angular.module('myTaskApp', []);
 app.controller('formCtrl',  function($scope,$http) {
-		if(localStorage.getItem("phone")!=undefined){
-		$scope.phone=localStorage.getItem("phone");
-	}else{
-		window.open("register.html","_self");	
-	}
+	$scope.phone=localStorage.getItem("phone");
 	$scope.confirmOTP=function(){
 	var myurl=localStorage.getItem("domain");
 	myurl=myurl+"/accounts/otp/"+$scope.phone.substr(3,10)+"/"+$scope.otp+"/";
@@ -16,13 +12,14 @@ app.controller('formCtrl',  function($scope,$http) {
 			method : "PUT",
 			url : myurl
 			}).then(function mySucces(response) {
-				console.log(response.data);
-				localStorage.setItem("auth",response.data);	
+//				console.log(response.data);
+				localStorage.setItem("auth",response.data);
+				window.open("index.html","_self");
 			}, function myError(response) {
 			console.log(response.statusText);
 		});
 //		window.open("login.html","_self") on success;
-		alert(localStorage.getItem("auth"));
+//		alert(localStorage.getItem("auth"));
 	}
 });
 

@@ -1,10 +1,9 @@
 $.support.cors = true;
+
 var app = angular.module('myTaskApp', []);
 app.controller('formCtrl',  function($scope,$http) {
 	if(localStorage.getItem("phone")!=undefined){
-		$scope.phone=localStorage.getItem("phone");
-	}else{
-		window.open("register.html","_self");	
+	$scope.phone=localStorage.getItem("phone");
 	}
 	if(localStorage.getItem("domain")!=undefined){
 	$scope.domain=localStorage.getItem("domain");
@@ -33,3 +32,19 @@ app.controller('formCtrl',  function($scope,$http) {
 		});
 	}
 });
+
+//           var data = $.param({
+//               fName: $scope.firstName,
+//                lName: $scope.lastName
+//            });
+//        
+//            var config = {
+//                headers : {
+//                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+//                }
+//            }
+//		$http({
+//			method : "GET",
+//			url : myurl,
+//			data: data,
+//			config: config

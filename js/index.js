@@ -3,6 +3,7 @@
 	var long=0.0;
 	var timestamp=0.0;
 	app.controller('myCtrl', function($scope,$http) {
+	localStorage.setItem("domain","http://kalpanaverma.webfactional.com");	
 	$scope.domain=localStorage.getItem("domain");
 	if(localStorage.getItem("phone") != undefined){
 		var phone = localStorage.getItem("phone");
@@ -41,12 +42,13 @@
 			data: {"category": myissue, "latitude":lat,"longitude":long,"timestamp":timestamp/1000},
 			dataType: 'json',
 			success: function(data){
-			console.log(data);
+//			console.log(data);
+			alert("Thanks, for your help. Issue has been mapped");
 //			localStorage.setItem(myissue,((new Date())/1000); add time when it was last clicked to control multiple click in one go
 			},
 			error: function(data){
-			console.log(data);
-			alert("ajax failed");
+//			console.log(data);
+			alert("KE001: connection failed");
 			}
 		});		
    };
@@ -57,9 +59,9 @@
 }
 	$scope.getScore=function(){
 	var scoreurl=localStorage.getItem("domain")+"/mycity/score/"+phone+"/";
-	console.log(scoreurl);
+//	console.log(scoreurl);
 	var auth=localStorage.getItem("auth");
-	console.log(auth);
+//	console.log(auth);
 			$http({
 			method : "GET",
 			url : scoreurl,

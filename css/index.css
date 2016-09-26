@@ -25,8 +25,8 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#dfe3ee;
+	background: url("../img/mycity.png") center center fixed;
     background-image:linear-gradient(top, #f7f7f7 0%, #dfe3ee 51%);
-    background-image:-webkit-linear-gradient(top, #f7f7f7 0%, #dfe3ee 51%);
     background-image:-ms-linear-gradient(top, #f7f7f7 0%, #dfe3ee 51%);
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;

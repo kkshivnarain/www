@@ -9,8 +9,12 @@ app.controller('formCtrl',  function($scope,$http) {
 	if(localStorage.getItem("domain")!=undefined){
 	$scope.domain=localStorage.getItem("domain");
 	}
+	if(localStorage.getItem("name")!=undefined){
+	$scope.name=localStorage.getItem("name");
+	}	
 	$scope.saveSettings=function(){
 		localStorage.setItem("phone",$scope.phone);
+		localStorage.setItem("name",$scope.name);
 		localStorage.setItem("domain",$scope.domain);
 		var myurl=localStorage.getItem("domain");
 		myurl=myurl+"/accounts/otp/";
@@ -21,10 +25,15 @@ app.controller('formCtrl',  function($scope,$http) {
 			}).then(function mySucces(response) {
 				alert("Welcome "+$scope.name+". You are registered");
 				window.open("otp.html","_self");
-				console.log(response.data);
+//				console.log(response.data);
 			}, function myError(response) {
-				console.log(response.statusText);
+//				console.log(response.statusText);
+				var otpError=response.statusText;
+				if(otpError="BAD"){
+					alert("KE003:Bad Connection");
+				}else{
 				alert("User exist, Request for OTP to activate");
+			}
 				window.open("otp.html","_self");
 		});	
 //		window.open("index.html","_self");

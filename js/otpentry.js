@@ -16,7 +16,8 @@ app.controller('formCtrl',  function($scope,$http) {
 				localStorage.setItem("auth",response.data);
 				window.open("index.html","_self");
 			}, function myError(response) {
-			console.log(response.statusText);
+				alert("KE003: Please try again or request for new OTP");
+//			console.log(response.statusText);
 		});
 //		window.open("login.html","_self") on success;
 //		alert(localStorage.getItem("auth"));

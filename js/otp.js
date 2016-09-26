@@ -24,10 +24,12 @@ app.controller('formCtrl',  function($scope,$http) {
 			method : "GET",
 			url : myurl
 			}).then(function mySucces(response) {
-				console.log(response.data);
+				alert("One Time Password (OTP) is send on SMS");
+//				console.log(response.data);
 				window.open("otpentry.html","_self");
 			}, function myError(response) {
-			console.log(response.statusText);
+				alert("KE002: Please try again");
+//			console.log(response.statusText);
 			window.open("register.html","_self");
 		});
 	}
